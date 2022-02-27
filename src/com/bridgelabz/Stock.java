@@ -6,7 +6,11 @@ class Stock {
     private double sharePrice;
     private double stockValue;
 
-
+    /**
+     * @param stockName
+     * @param numberOfShares
+     * @param sharePrice
+     */
     Stock(String stockName, int numberOfShares, double sharePrice){
         this.stockName = stockName;
         this.numberOfShares = numberOfShares;
@@ -42,10 +46,5 @@ class Stock {
 
     public void setSharePrice(double sharePrice) {
         this.sharePrice = sharePrice;
-    }
-
-    @Override
-    public String toString() {
-        return stockName + "\t" + numberOfShares + "\t" + sharePrice + "\t" + stockValue + "\n";
     }
 }
