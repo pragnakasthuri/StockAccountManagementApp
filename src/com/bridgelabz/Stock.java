@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+/**
+ * Class to hold stock information
+ */
 class Stock {
     private String stockName;
     private int numberOfShares;
@@ -16,6 +19,19 @@ class Stock {
         this.numberOfShares = numberOfShares;
         this.sharePrice = sharePrice;
     }
+
+    public Stock() {
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Stock stock = (Stock) o;
+        return this.stockName.equals(stock.stockName);
+    }
+
     public double getStockValue() {
         return stockValue;
     }
@@ -46,5 +62,13 @@ class Stock {
 
     public void setSharePrice(double sharePrice) {
         this.sharePrice = sharePrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "stockName='" + stockName + '\'' +
+                ", sharePrice=" + sharePrice +
+                '}';
     }
 }
